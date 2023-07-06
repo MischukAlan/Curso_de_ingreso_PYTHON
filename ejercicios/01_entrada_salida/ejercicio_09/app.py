@@ -40,10 +40,14 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        sueldo = int (self.txt_sueldo.get())
+        increme = int (self.txt_incremento.get())
+        calcula = sueldo * (increme / 100) 
+        resulta = calcula + sueldo
+        alert ('Resultado', resulta)
+
         
     
 if __name__ == "__main__":
     app = App()
-    app.geometry("300x300")
     app.mainloop()

@@ -50,18 +50,35 @@ class App(customtkinter.CTk):
         self.btn_dividir.grid(row=5, pady=10, columnspan=2, sticky="nsew")
 
     def btn_sumar_on_click(self):
-        pass
+        prim_carac = int (self.txt_operador_a.get ())
+        segcarac = int (self.txt_operador_b.get ())
+        opera = prim_carac + segcarac
+        concate = 'El resultado de la operacion es ' + str (opera)
+        alert('Resultado', concate)
+        
 
     def btn_restar_on_click(self):
-        pass
+        prim_carac = int (self.txt_operador_a.get ())
+        segcarac = int (self.txt_operador_b.get ())
+        opera = prim_carac - segcarac
+        concate = 'El resultado de la operacion es ' + str (opera)
+        alert('Resultado', concate)
+        
 
     def btn_multiplicar_on_click(self):
-        pass
+        prim_carac = int (self.txt_operador_a.get ())
+        segcarac = int (self.txt_operador_b.get ())
+        opera = prim_carac * segcarac
+        concate = 'El resultado de la operacion es ' + str (opera)
+        alert('Resultado', concate)
 
     def btn_dividir_on_click(self):
-        pass
+        prim_carac = int (self.txt_operador_a.get ())
+        segcarac = int (self.txt_operador_b.get ())
+        opera = prim_carac // segcarac
+        concate = 'El resultado de la operacion es ' + str (opera)
+        alert('Resultado', concate)
         
 if __name__ == "__main__":
     app = App()
-    app.geometry("300x300")
     app.mainloop()

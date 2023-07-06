@@ -41,11 +41,14 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        prim_carac = int (self.txt_operador_a.get ())
+        seg_carac = int (self.txt_operador_b.get ())
+        opera = prim_carac // seg_carac
+        concate = 'El resto de dividir ' + str (prim_carac) + ' y ' + str (seg_carac) + ' es ' + str (opera)
+        alert('Resultado', concate)
         
         
     
 if __name__ == "__main__":
     app = App()
-    app.geometry("300x300")
     app.mainloop()
