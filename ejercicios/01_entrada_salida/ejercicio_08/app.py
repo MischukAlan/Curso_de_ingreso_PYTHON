@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Alan 
+apellido: Mischuk
 ---
 Ejercicio: entrada_salida_08
 ---
@@ -43,7 +43,7 @@ class App(customtkinter.CTk):
     def btn_mostrar_on_click(self):
         prim_carac = int (self.txt_operador_a.get ())
         seg_carac = int (self.txt_operador_b.get ())
-        opera = prim_carac // seg_carac
+        opera = prim_carac % seg_carac
         concate = 'El resto de dividir ' + str (prim_carac) + ' y ' + str (seg_carac) + ' es ' + str (opera)
         alert('Resultado', concate)
         
